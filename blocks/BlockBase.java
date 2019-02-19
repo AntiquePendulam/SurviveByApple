@@ -9,9 +9,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class BlockBase extends Block{
     public BlockBase(Material material, String unlocalizedName){
-        super(material);
-        this.setUnlocalizedName(unlocalizedName);
-        this.setRegistryName(new ResourceLocation(SurviveByApple.MODID, unlocalizedName));
+        this(material, material.getMaterialMapColor(), unlocalizedName);
     }
     public BlockBase(Material material, MapColor mapColor, String unlocalizedName){
         super(material, mapColor);
